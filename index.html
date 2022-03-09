@@ -5,26 +5,59 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="style.css" />
+    <script defer src="index.js"></script>
     <title>imbME</title>
 </head>
+
 <body>
     <div id = "main-div">
-        <h1 style="text-align:center;">imbME</h1>
-    <button id = "Like-Btn">Like</button>
-    <img src ="./assets/image-placeholder.jpg" id = "poster" alt = "Image placeholder">
-    <h2>Movie Name</h2>
-    <h3 class = "name" id = "Movie-name">the actual Name</h3>
-    <h2>Rating</h2>
-    <p>
-        <span class = "Rating">0</span> / 10
-    </p>
-    <h2 id = "Description">Description</h2>
-    <h3>Insert here</h3>
-    <textarea id = "Comment-box" placeholder = "Tell us"></textarea>
-    <button id = "Submit-btn">Submit</button>
+        <h1>imbME</h1>
+    
+    <div>
+        <img src="//:0" id = "Movie-banner" alt = "Image placeholder"> 
+    <!-- main poster image -->
+    
+
+
+            <div id = "movie-details">
+                    <h2>Title</h2>
+                    <h3 class = "name" id = "Movie-name">the actual Name</h3>
+                    <h2>RottenTomatoes Score</h2>
+                <p>
+                    <span id = "Score">0</span> %
+                <!-- rating -->
+                </p>
+                    <h2>Description</h2>
+                    <h3 id = "add-description">Insert here</h3>
+                    <!-- the Description -->
+            </div>
+   
+
+
+             <div>
+                <button id="like-button" type="button">
+                <span id="likes">0</span> 
+                ❤️
+                </button>
+            </div>
+
+            <div>
+                <textarea id = "Comment-box" placeholder = "Tell us"></textarea>
+            <!-- event listener and grab the element with the value because its a comment box -->
+                <ul id ="ul"></ul>
+            </div>
+    <div>
+        <button id = "Submit-btn">Submit</button>
+        <!-- add an event listener to the submit button -->
     </div>
-    <div id = "Image-Container">
-        <img src ="./assets/image-placeholder.jpg" alt = "posters">
+
+
+    <div>
+       <ul id = "movie-list"></ul>
+       <li></li>
+        <!-- the rest of the posters -->
     </div>
+
+
 </body>
 </html>
