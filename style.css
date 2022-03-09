@@ -1,5 +1,23 @@
+h1{
+    color: tomato;
+    text-align: center;
+}
+
+
+h2 {
+    color: greenyellow;
+    text-align: center;
+}
+
+h3 {
+    color: blueviolet;
+    text-align: center;
+}
+
 body {
     background-image: url(https://images6.fanpop.com/image/photos/41400000/Kiki-s-Delivery-Service-Background-Art-studio-ghibli-41475721-1280-727.jpg);
     background-size: cover;
     background-repeat: no-repeat;
    }
+
+
