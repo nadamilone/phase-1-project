@@ -8,47 +8,57 @@
     <script defer src="index.js"></script>
     <title>imbME</title>
   </head>
-  <body>
-    <div id="main-div">
-      <h1>imbME</h1>
-      <!-- <img src="//:0" id="Movie-banner" alt="Image placeholder" /> -->
-      <!-- main poster image -->
+<body>
+    <div id = "main-div">
+        <h1>imbME</h1>
+    
+    <div>
+        <img src="//:0" id = "Movie-banner" alt = "Image placeholder"> 
+    <!-- main poster image -->
+    
 
-      <div id="movie-details">
-        <div class="movie-poster"></div>
-        <h3>Title</h3>
-        <!-- <h3 class="name" id="Movie-name">the actual Name</h3> -->
-        <h4>Score:</h4>
-        <p>
-          <span class="Score">0</span> %
-          <!-- score -->
-        </p>
-        <h2>Description</h2>
-        <!-- <h3 id="add-discription">Insert here</h3> -->
-        <!-- the Description -->
-        <p>hello, this is a paragraph and we're working on fixing it!</p>
-      </div>
 
-      <div>
-        <button id="like-button" type="button"></button>
-        <span id="likes">0</span> ❤️
-      </div>
+            <div id = "movie-details">
+                    <h2>Title</h2>
+                    <h3 class = "name" id = "Movie-name">the actual Name</h3>
+                    <h2>RottenTomatoes Score</h2>
+                <p>
+                    <span id = "Score">0</span> %
+                <!-- rating -->
+                </p>
+                    <h2>Description</h2>
+                    <h3 id = "add-description">Insert here</h3>
+                    <!-- the Description -->
+            </div>
+   
 
-      <div>
-        <textarea id="Comment-box" placeholder="Tell us"></textarea>
-        <!-- event listener and grab the element with the value because its a comment box -->
-        <ul id="ul"></ul>
-      </div>
 
-      <div>
-        <button id="Submit-btn">Submit</button>
+             <div>
+                <button id="like-button" type="button">
+                <span id="likes">0</span> 
+                ❤️
+                </button>
+            </div>
+
+            <div>
+                <textarea id = "Comment-box" placeholder = "Tell us"></textarea>
+            <!-- event listener and grab the element with the value because its a comment box -->
+                <ul id ="ul"></ul>
+            </div>
+    <div>
+        <button id = "Submit-btn">Submit</button>
         <!-- add an event listener to the submit button -->
-      </div>
-
-      <div>
-        <section id="movie-list"></section>
-        <!-- the rest of the posters -->
-      </div>
+        <!--comment-->
     </div>
-  </body>
+
+
+    <div>
+       <ul id = "movie-list"></ul>
+       <li></li>
+        <!-- the rest of the posters -->
+    </div>
+
+
+</body>
 </html>
+
