@@ -15,7 +15,7 @@
       <div id="movie-details">
         <img src="" id="Movie-banner" />
         <div id="button-container">
-            <h3 class="name" id="Movie-name">Film Name</h3>
+          <h3 class="name" id="Movie-name">Film Name</h3>
           <button id="like-button" type="button">
             <span id="likes">0</span> ❤️
           </button>
@@ -26,24 +26,25 @@
         </div>
 
         <div><h3 id="add-description">Description</h3></div>
-      </div>
-      <div>
-        <form id="comment-box">
-          <label for="new-comment">Your Thoughts:</label>
-          <input
-            type="text"
-            id="new-comment"
-            name="new-comment"
-            placeholder="comment"
-          />
-          <input type="submit" value="Create New Comment" />
-        </form>
+        <div id="add-comments">
+          <form id="comment-box">
+            <label for="new-comment">Your Thoughts:</label>
+            <input
+              type="text"
+              id="new-comment"
+              name="new-comment"
+              placeholder="comment"
+            />
+            <input type="submit" value="Create New Comment" />
+          </form>
 
-        <ul id="comments-container"></ul>
+          <ul id="comments-container"></ul>
+        </div>
       </div>
-      <div>
-        <ul id="movie-list"></ul>
-        <li></li>
+      <div id="movie-list">
+        <h2>Browse Films</h2>
+        <ul></ul>
+       
       </div>
     </div>
   </body>

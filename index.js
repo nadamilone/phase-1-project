@@ -21,6 +21,7 @@ function renderFilmArray(films) {
 }
 const likeButton = document.querySelector("#like-button");
 
+const currentCommentsObj = {};
 const currentLikesObj = {};
 let currentId = null;
 
@@ -48,12 +49,23 @@ function filmListDetails(film) {
     currentLikesObj[currentId] = 0;
     likes.textContent = 0;
   }
+
+  const commentUl = document.querySelector("#comments-container");
+  commentUl.innerHTML = "";
+  if (currentCommentsObj[currentId]) {
+    currentCommentsObj[currentId].forEach((comment) => {
+      const commentLi = document.createElement("li");
+      commentLi.textContent = comment;
+      commentUl.append(commentLi);
+    });
+  } else {
+    currentCommentsObj[currentId] = [];
+  }
 }
 
 likeButton.addEventListener("click", () => {
   let likes = document.querySelector("#likes");
   likes.textContent = ++currentLikesObj[currentId];
-  console.log(currentLikesObj)
 });
 
 const commentBox = document.querySelector("#comment-box");
@@ -65,5 +77,6 @@ commentBox.addEventListener("submit", (e) => {
   const commentLi = document.createElement("li");
   commentLi.textContent = newComment;
   commentUl.append(commentLi);
+  currentCommentsObj[currentId].push(newComment);
   commentBox.reset();
 });
