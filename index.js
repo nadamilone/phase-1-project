@@ -1,4 +1,9 @@
 const filmsUrl = 'https://ghibliapi.herokuapp.com/films'
+const firstfilmUrl = 'https://ghibliapi.herokuapp.com/films/2baf70d1-42bb-4437-b551-e5fed5a87abe'
+
+fetch(firstfilmUrl)
+    .then(response => response.json())
+    .then(dataFirst => filmListDetails(dataFirst))
 
 fetch(filmsUrl)
     .then(response => response.json())
@@ -7,7 +12,6 @@ fetch(filmsUrl)
 function renderFilmArray(films) {
     films.forEach((film) => {
         const movieContainer = document.querySelector('#movie-list')
-        // console.log(movieContainer)
         const li = document.createElement('li')
         li.textContent = film.title
         li.addEventListener('click', () => filmListDetails(film))
@@ -23,6 +27,9 @@ function filmListDetails(film) {
     const movieTitle = document.querySelector('#Movie-name')
     movieTitle.textContent = film.title
 
+    const japanName = document.querySelector('#Japanese-name')
+    japanName.textContent = film.original_title
+
     const movieScore = document.querySelector('#Score')
     movieScore.textContent = film.rt_score
 
@@ -37,18 +44,14 @@ likeButton.addEventListener('click', () => {
     ++likes.textContent
 })
 
+const commentBox = document.querySelector('#comment-box')
 
-const submitButton = document.querySelector('#Submit-btn')
-console.log(submitButton)
-
-submitButton.addEventListener('click', () => {
-    console.log('I work!')
-    const commentBox = document.querySelector('#Comment-box').value
-    const commentUl = document.querySelector('ul')
+commentBox.addEventListener('submit', (e) => {
+    e.preventDefault()
+    const newComment = document.querySelector('#new-comment').value
+    const commentUl = document.querySelector('#comments-container')
     const commentLi = document.createElement('li')
-    commentLi.textContent = commentBox
+    commentLi.textContent = newComment
     commentUl.append(commentLi)
-
+    commentBox.reset()
 })
-
-
